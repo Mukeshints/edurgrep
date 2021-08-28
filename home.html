@@ -35,29 +35,95 @@
         </div>
       </div>
     </div>
+
     <div class="container">
+      <hr class="my-5" />
+      <div class="row">
+        <div class="col-lg-10 col-md-12 m-auto text-center">
+          <h1 class="my-2 font-weight-bold">Why Us ?</h1>
+          <p class="font-weight-bold text-secondary text-large pt-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            aperiam saepe sequi omnis repellat harum accusamus quam quos neque
+            fugiat dignissimos dolor vel, quia laborum officia inventore tempora
+            delectus voluptas. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Itaque tenetur nobis incidunt saepe error culpa
+            quod tempora ad, recusandae similique nesciunt? Atque vel amet
+            nobis. Adipisci dolor obcaecati dolorum veritatis?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <hr class="my-5" />
       <div class="row">
         <div class="col-lg-10 col-md-12 m-auto">
+          <h1 class="font-weight-bold text-center">Join the Revolution</h1>
           <div class="row">
             <div class="col-md-4 text-center">
-                <img  src="images/Student.svg"/>
-                <h1 class="my-1 f-800 text-info"><span>17000 +</span></h1>
-                    <h5 class="my-1 font-weight-bold">No of Registered Teachers</h5>
+              <img src="images/Student.svg" />
+              <h1 class="my-1 f-800 text-info counter-count">17000</h1>
+              <h5 class="my-1 font-weight-bold">No of Registered Teachers</h5>
             </div>
             <div class="col-md-4 text-center">
-                <img  src="images/Student.svg"/>
-                <h1 class="my-1 f-800 text-info"><span>1,90,000 +</span></h1>
-                    <h5 class="my-1 font-weight-bold">No of Registered Students</h5>
+              <img src="images/Teachers.svg" />
+              <h1 class="my-1 f-800 text-info counter-count">190000</h1>
+              <h5 class="my-1 font-weight-bold">No of Registered Students</h5>
             </div>
-             <div class="col-md-4 text-center">
-                <img  src="images/Student.svg"/>
-                <h1 class="my-1 f-800 text-info"><span>4,90,000 +</span></h1>
-                    <h5 class="my-1 font-weight-bold">No of Class Taken</h5>
+            <div class="col-md-4 text-center">
+              <img src="images/class taken.svg" />
+              <h1 class="my-1 f-800 text-info counter-count">490000</h1>
+              <h5 class="my-1 font-weight-bold">No of Class Taken</h5>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <hr class="my-5" />
+      <div class="row">
+        <div class="col-lg-11 col-md-12 m-auto">
+          <h1 class="font-weight-bold text-center">How It Works</h1>
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="images/Student.svg" />
+              <h3 class="mt-1 f-800 text-info">Book Your Class</h3>
+
+              <p class="mt-3 font-weight-bold">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                dolores officiis, sapiente nesciunt eaque deserunt quibusdam
+                deleniti ab laborum, velit eius atque natus in illo blanditiis!
+                Corrupti repudiandae illo dignissimos.
+              </p>
+            </div>
+            <div class="col-md-4 text-center">
+              <img src="images/Teachers.svg" />
+              <h3 class="mt-1 f-800 text-info">Approve Your Teacher</h3>
+
+              <p class="mt-3 font-weight-bold">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                dolores officiis, sapiente nesciunt eaque deserunt quibusdam
+                deleniti ab laborum, velit eius atque natus in illo blanditiis!
+                Corrupti repudiandae illo dignissimos.
+              </p>
+            </div>
+            <div class="col-md-4 text-center">
+              <img src="images/class taken.svg" />
+              <h3 class="mt-1 f-800 text-info">Start Learning</h3>
+
+              <p class="mt-3 font-weight-bold">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                dolores officiis, sapiente nesciunt eaque deserunt quibusdam
+                deleniti ab laborum, velit eius atque natus in illo blanditiis!
+                Corrupti repudiandae illo dignissimos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -68,5 +134,23 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(".counter-count").each(function () {
+        $(this)
+          .prop("Counter", 0)
+          .animate(
+            {
+              Counter: $(this).text(),
+            },
+            {
+              duration: 5000,
+              easing: "swing",
+              step: function (now) {
+                $(this).text(Math.ceil(now));
+              },
+            }
+          );
+      });
+    </script>
   </body>
 </html>
