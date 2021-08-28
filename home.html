@@ -62,17 +62,17 @@
           <div class="row">
             <div class="col-md-4 text-center">
               <img src="images/Student.svg" />
-              <h1 class="my-1 f-800 text-info counter-count">17000</h1>
+              <h1 class="my-1 f-800 text-info ">1,7000 <sup>+</sup></h1>
               <h5 class="my-1 font-weight-bold">No of Registered Teachers</h5>
             </div>
             <div class="col-md-4 text-center">
               <img src="images/Teachers.svg" />
-              <h1 class="my-1 f-800 text-info counter-count">190000</h1>
+              <h1 class="my-1 f-800 text-info ">1,90,000 <sup>+</sup></h1>
               <h5 class="my-1 font-weight-bold">No of Registered Students</h5>
             </div>
             <div class="col-md-4 text-center">
               <img src="images/class taken.svg" />
-              <h1 class="my-1 f-800 text-info counter-count">490000</h1>
+              <h1 class="my-1 f-800 text-info ">4,90,000 <sup>+</sup></h1>
               <h5 class="my-1 font-weight-bold">No of Class Taken</h5>
             </div>
           </div>
@@ -134,23 +134,6 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(".counter-count").each(function () {
-        $(this)
-          .prop("Counter", 0)
-          .animate(
-            {
-              Counter: $(this).text(),
-            },
-            {
-              duration: 5000,
-              easing: "swing",
-              step: function (now) {
-                $(this).text(Math.ceil(now));
-              },
-            }
-          );
-      });
-    </script>
+   
   </body>
 </html>
